@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Explorer</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        #main{
+            width: 100%;
+            background-color: lightblue;
+        }
+        #search-box{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        input {
+            width: 25rem;
+            padding: 0.75rem;
+            margin: 5rem 0 2rem;
+            border-radius: 8px;
+            border: none;
+            outline: 0;
+            color: #C0EEF2;
+            background-color: lavender;
+            box-shadow: 0 0 8px #181823;
+        }
+        #container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            height: 25rem;
+            width: 15rem;
+            margin: 0.5rem 0;
+            background-color: lavenderblush;
+            overflow: hidden;
+            position: relative;
+        }
+
+        img {
+            height: 100%;
+            width: 15rem;
+            z-index: -3;
+        }
+
+        .overlay {
+            transition: all ease-in 0.2s;
+            position: absolute;
+            background-color: lavender;
+            top: 90%;
+            margin: 0 0.25rem;
+            padding: 0 0.25rem 0.5rem;
+            border-radius: 12px 12px;
+            transition: 0.8s;
+        }
+
+        .box:hover .overlay {
+            display: block;
+            z-index: 1;
+            top: 42%;
+            height: 20rem;
+        }
+        .title{
+            display: flex;
+            justify-content: space-between;
+            padding:0.5rem;
+            align-items:flex-start;
+        }
+        h2 {
+            /* padding: 0.5rem 0; */
+            display: inline-block;
+            /* margin: 0 .5rem; */
+            text-transform: capitalize;
+        }
+
+        p {
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="search-box">
+        <input type="search" id="search" autocomplete="off" placeholder="Search Here...">
+        </div>
+        <div id="container">
+            <!-- <div class="box">
+                <img src="back.jpg" alt="">
+                <div class="overlay">
+                    <div class="title">
+                        <h2>title</h2>
+                        <span>9.2</span>
+                    </div>
+                    <h3>Overview</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque culpa perferendis alias sed est! Id
+                        mollitia sapiente quod tempore itaque provident quae et a? Iusto laboriosam quo similique molestias
+                        dolores.
+                        Doloremque sit laboriosam dolore perferendis animi nihil ipsa perspiciatis dolor officiis atque
+                        dolorem iusto blanditiis quam, quas id nobis illo nulla. Aliquid ratione quas praesentium impedit
+                        sunt odio nisi
+                        laudantium?</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="back.jpg" alt="">
+                <div class="overlay">
+                    <div class="title">
+                        <h2>title</h2>
+                        <span>9.2</span>
+                    </div>
+                    <h3>Overview</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque culpa perferendis alias sed est! Id
+                        mollitia sapiente quod tempore itaque provident quae et a? Iusto laboriosam quo similique molestias
+                        dolores.
+                        Doloremque sit laboriosam dolore perferendis animi nihil ipsa perspiciatis dolor officiis atque
+                        dolorem iusto blanditiis quam, quas id nobis illo nulla. Aliquid ratione quas praesentium impedit
+                        sunt odio nisi
+                        laudantium?</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="back.jpg" alt="">
+                <div class="overlay">
+                    <div class="title">
+                        <h2>title</h2>
+                        <span>9.2</span>
+                    </div>
+                    <h3>Overview</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque culpa perferendis alias sed est! Id
+                        mollitia sapiente quod tempore itaque provident quae et a? Iusto laboriosam quo similique molestias
+                        dolores.
+                        Doloremque sit laboriosam dolore perferendis animi nihil ipsa perspiciatis dolor officiis atque
+                        dolorem iusto blanditiis quam, quas id nobis illo nulla. Aliquid ratione quas praesentium impedit
+                        sunt odio nisi
+                        laudantium?</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="back.jpg" alt="">
+                <div class="overlay">
+                    <div class="title">
+                        <h2>title</h2>
+                        <span>9.2</span>
+                    </div>
+                    <h3>Overview</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque culpa perferendis alias sed est! Id
+                        mollitia sapiente quod tempore itaque provident quae et a? Iusto laboriosam quo similique molestias
+                        dolores.
+                        Doloremque sit laboriosam dolore perferendis animi nihil ipsa perspiciatis dolor officiis atque
+                        dolorem iusto blanditiis quam, quas id nobis illo nulla. Aliquid ratione quas praesentium impedit
+                        sunt odio nisi
+                        laudantium?</p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <script src="sc.js"></script>
+</body>
+
+</html>

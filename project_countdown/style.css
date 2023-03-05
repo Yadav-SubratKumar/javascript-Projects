@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    padding: 3rem 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: white;
+    background: url(back2.jpg)no-repeat center center/cover;
+
+}
+.text , .Date_time{
+    margin-top: 1rem;
+    font-size: 2.4rem;
+}
+
+#container div{
+    margin-top: 1rem;
+    width: 500px ;
+    display: flex;
+}
+#container div input{
+    width: 50%;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 2rem;
+    /* display: block; */
+}
+
+#container div nav{
+    text-align: center;
+}
+

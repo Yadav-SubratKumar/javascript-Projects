@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: grid;
+            place-content: center;
+            background-color: cornflowerblue;
+        }
+        h2{
+            margin-bottom: 1rem;
+        }
+        .container{
+            padding: 15px;
+            width: 17.5rem;
+            background-color: white;
+        }
+        #pwd{
+            width: 100%;
+            padding: 0.25rem;
+            margin: 0 0 1rem 0;
+        }
+        label{
+            text-transform: capitalize;
+        }
+        input,label{
+            cursor: pointer;
+        }
+        .pwd_box {
+            display: flex;
+            justify-content: space-between;
+        }
+        .pwd_box input[type=text]{
+            width: 27px;
+            padding: 1px 3px;
+        }
+        .btn{
+            width: 100%;
+            margin: 0.5rem 0;
+            padding: 0.25rem;
+            background-color: cornflowerblue;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="Main_container">
+        <div class="container">
+            <h2>Password Generator</h2>
+            <input type="text"  id="pwd" value="test">
+            <div class="pwd_box">
+                <label for="pwd_len">password length</label>
+                <input class="opt" type="text" id="pwd_len" value="10">
+            </div>
+            <div class="pwd_box">
+                <label for="upper">UpperCase</label>
+                <input class="opt" type="checkbox" id="upper" value="a" name="password">
+            </div>
+            <div class="pwd_box">
+                <label for="lower">LowerCase</label>
+                <input class="opt" type="checkbox" id="lower" value="b" name="password">
+            </div>
+            <div class="pwd_box">
+                <label for="symbols">Symbol's</label>
+                <input class="opt" type="checkbox" id="symbols" value="c" name="password">
+            </div>
+            <div class="pwd_box">
+                <label for="numbers">Number's</label>
+                <input class="opt" type="checkbox" id="numbers" value="d" name="password">
+                </div> 
+            <button class="btn" >Generate</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

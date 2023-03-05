@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Page</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: steelblue;
+        }
+
+        #Main_container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Quiz_box {
+            padding: 1.5rem 0.5rem;
+            width: 40vw;
+            border-radius: 0.5rem;
+            background-color: white;
+        }
+
+        h2 {
+            margin-bottom: 1.2rem;
+            margin-left: 0.5rem;
+        }
+
+        input {
+            margin: 0.75rem;
+            margin-left: 0.25rem;
+        }
+
+        button {
+            width: 100%;
+            border: 0;
+            border-radius: 10px;
+            padding: 5px;
+            background-color: steelblue;
+            color: white;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="Main_container">
+        <div class="Quiz_box">
+            <h2 id="quiz">This is the dummy text</h2>
+            <div class="option_div">
+                <input class="opt" type="radio" id="optionA" value="a" name="quizOPt">
+                <label for="optionA">option A </label>
+            </div>
+            <div class="option_div">
+                <input class="opt" type="radio" id="optionB" value="b" name="quizOPt">
+                <label for="optionB">option B </label>
+            </div>
+            <div class="option_div">
+                <input class="opt" type="radio" id="optionC" value="c" name="quizOPt">
+                <label for="optionC">option C </label>
+            </div>
+            <div class="option_div">
+                <input class="opt" type="radio" id="optionD" value="d" name="quizOPt">
+                <label for="optionD">option D </label>
+            </div>
+            <button class="btn" onclick="previousQue()">Previous</button>
+            <button class="btn" onclick="submitQuiz()">Submit</button>
+            <button class="btn" onclick="nextQue()">Next</button>
+        </div>
+    </div>
+    <script src="script.js">
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+    <title>Counter</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            font-family: 'Rubik Dirt', cursive;
+        }
+       
+       body{
+            height: 100vh;
+            width: 100%;
+            text-align: center;
+            background-color: burlywood;
+            display: grid;
+            place-content: center;
+        }
+        #container{
+            background-color: cornsilk;
+            border-radius: 15px;
+            box-shadow: 0 0 15px #000;
+            padding: 2rem;
+        }
+        button{
+            width: 80px;
+            padding: 10px;
+            margin: 10px ;
+            background-color: cadetblue;
+            color: burlywood;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #000;
+        }
+        h1{
+            color: cadetblue;
+            letter-spacing: 1px;
+        }
+        p{
+            font-size: 1.5rem;
+            color: grey;
+            margin: 20px 0 ;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>This is a counter</h1>
+        <p id="counter">
+            0
+        </p>
+        <button class="btn pre">Subtract</button>
+        <button class="btn next">Add</button>
+    </div>
+    <script>
+        (
+            function () {
+                const buttons = document.querySelectorAll(".btn");
+                let count = 0;
+                buttons.forEach((button) => {
+                    button.addEventListener('click', function () {
+                        if (button.classList.contains("pre")) {
+                            count--;
+                        }
+                        else if (button.classList.contains("next")) {
+                            count++;
+                        }
+                        const counter = document.querySelector("#counter");
+                        counter.textContent = count;
+
+                        if (count < 0) {
+                            counter.style.color = "red";
+                        }
+                        else if (count > 0) {
+                            counter.style.color = "blue";
+                        }
+                        else {
+                            counter.style.color = "black";
+                        }
+                    })
+                })
+            }
+        )()
+    </script>
+</body>
+
+</html>

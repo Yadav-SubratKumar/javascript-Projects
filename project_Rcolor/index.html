@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="container">
+            <h1>Color Generator</h1>
+            <div id="color_box">
+
+            </div>
+            <h2 id="colorName">#fff</h2>
+            <button id="btn">Generate</button>
+        </div>
+    </div>
+    <script>
+        const getColor = () => {
+            const randomNumber = Math.floor(Math.random() * 16777215);
+            const randomCode = '#' + randomNumber.toString(16);
+            // console.log(randomNumber , randomCode);
+            document.getElementById('color_box').style.backgroundColor = randomCode;
+            document.getElementById('colorName').innerHTML = randomCode + " " + "<sub><font size=2>📋</font></sub>";
+            document.getElementById('colorName').addEventListener('click',() =>{
+            navigator.clipboard.writeText(randomCode);
+        })
+        }
+        document.getElementById('btn').addEventListener('click',getColor);
+
+       
+        getColor();
+    </script>
+</body>
+
+</html>
